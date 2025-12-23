@@ -1,0 +1,58 @@
+
+<html>
+
+<head>
+
+<script type="text/javascript">
+
+function pintar(){//aqui desenhamos no canvas
+	var canvas = document.getElementById("cenario");
+	var ctx = canvas.getContext("2d");
+	var img = document.getElementById("imagem1");
+
+	//vamos criar um texto
+	ctx.font = "80px solucao";
+	ctx.fillStyle = "rgb(48,56,41)";
+	ctx.textAlign="center";
+	ctx.shadowBlur = 24;
+	// ctx.shadowOffsetX = 2;
+	// ctx.shadowOffsetY = 2;
+	ctx.shadowColor = "lightgrey";
+	ctx.fillText("JSA CONDOMÍNIO",640,100);
+	// ctx.shadowOffsetX = 1;
+	// ctx.shadowOffsetY = 1;
+	ctx.fillRect(240,130,800,10);
+	ctx.fillRect(240,240,800,10);
+	ctx.font = "48.8px solucao";
+	ctx.fillText("COBRANÇA, CONSULTORIA E",640,184);
+	ctx.fillText("ASSESSORIA CONDOMINIAL",640,230);
+	ctx.shadowBlur = 24;
+	ctx.shadowColor = "white";
+	ctx.drawImage(img,0,5,240,240);
+	ctx.font = "40px solucao";
+	ctx.fillText("(62)3991-1038",640,300);
+}
+
+</script>
+
+<style type="text/css">
+
+@font-face{font-family:"solucao";src:url("COPRGTB.ttf")format("truetype");}
+
+:not(p){font-family:solucao;cursor:default;}
+
+</style>
+
+</head>
+
+<body bgcolor="darkslategrey" onload="pintar()">
+
+<!-- primeiro escrevemos sua tag: -->
+
+<canvas id="cenario" height="330px" width="1060px" style="border:1px solid lightgrey;"></canvas>
+
+<img src="Marca.png" id="imagem1" style="transform:rotate(45deg);"/>
+
+</body>
+
+</html>

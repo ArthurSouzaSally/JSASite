@@ -1,0 +1,52 @@
+
+<html>
+
+<head>
+
+<meta charset="UTF-8"/>
+
+<script type="text/javascript">
+
+function pintar(){//aqui desenhamos no canvas
+	var canvas = document.getElementById("cenario");
+	var ctx = canvas.getContext("2d");
+	var img = document.getElementById("imagem1");
+	ctx.drawImage(img,0,0,1920,720);
+	//vamos criar um texto
+	ctx.font = "100px solucao";
+	ctx.fillStyle = "white";
+	ctx.textAlign="center";
+	ctx.shadowBlur = 6;
+	ctx.shadowOffsetX = 2;
+	ctx.shadowOffsetY = 2;
+	ctx.shadowColor = "black";
+	ctx.fillText("COBRANÇA GARANTIDA",900,100);
+	ctx.fillRect(230,130,1353,5);
+	ctx.font = "60px solucao";
+	ctx.fillText("100% da Receita Mensal Antecipada",900,400);
+	ctx.fillText("Contrato Simplificado",900,500);
+}
+
+</script>
+
+<style type="text/css">
+
+@font-face{font-family:"solucao";src:url("COPRGTB.ttf")format("truetype");}
+
+:not(p){font-family:solucao;cursor:default;}
+
+</style>
+
+</head>
+
+<body bgcolor="darkslategrey" onload="pintar()">
+
+<!-- primeiro escrevemos sua tag: -->
+
+<canvas id="cenario" height="720px" width="1920px" style="border:1px solid lightgrey;"></canvas>
+
+<img src="originais propagandas/p1.jpg" id="imagem1"/>
+
+</body>
+
+</html>

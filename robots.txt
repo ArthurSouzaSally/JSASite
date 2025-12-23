@@ -1,0 +1,14 @@
+User-agent: *
+Allow: index.html
+Disallow: /extras
+Disallow: /extras/
+Disallow: canvas.png
+Disallow: canvas1.png
+Disallow: condomínio.png
+Disallow: send.php
+Disallow: COPRGTB.TTF
+Disallow: assessoria.html
+Disallow: condominial.html
+Disallow: extrajudicial.html
+Disallow: garantida.html
+Disallow: judicial.html
